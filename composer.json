@@ -1,0 +1,58 @@
+{
+    "name": "aquinoaldair/phone-code",
+    "description": "Códigos de teléfonos o marcación por país en laravel",
+    "keywords": [
+        "aquinoaldair",
+        "phone-code",
+        "laravel",
+        "php",
+        "dial-code",
+        "prefijos-telefono"
+    ],
+    "homepage": "https://github.com/aquinoaldair/phone-code",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Aldair",
+            "email": "aquinoaldair@hotmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Aquinoaldair\\PhoneCode\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Aquinoaldair\\PhoneCode\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Aquinoaldair\\PhoneCode\\PhoneCodeServiceProvider"
+            ],
+            "aliases": {
+                "PhoneCode": "Aquinoaldair\\PhoneCode\\PhoneCodeFacade"
+            }
+        }
+    }
+}
