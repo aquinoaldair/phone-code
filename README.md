@@ -1,11 +1,10 @@
 # Codigos o Prefijos de teléfonos de paises
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/aquinoaldair/phone-code.svg?style=flat-square)](https://packagist.org/packages/aquinoaldair/phone-code)
-[![Build Status](https://img.shields.io/travis/aquinoaldair/phone-code/master.svg?style=flat-square)](https://travis-ci.org/aquinoaldair/phone-code)
-[![Quality Score](https://img.shields.io/scrutinizer/g/aquinoaldair/phone-code.svg?style=flat-square)](https://scrutinizer-ci.com/g/aquinoaldair/phone-code)
+[![Build Status](https://travis-ci.org/aquinoaldair/phone-code.svg?branch=master)](https://travis-ci.org/aquinoaldair/phone-code)
 [![Total Downloads](https://img.shields.io/packagist/dt/aquinoaldair/phone-code.svg?style=flat-square)](https://packagist.org/packages/aquinoaldair/phone-code)
 
-Códigos de teléfonos o marcación por país para Laravel
+Laravel 6.x or higher
 
 ## Installation
 
