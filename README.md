@@ -1,4 +1,4 @@
-# Very short description of the package
+# Codigos o Prefijos de teléfonos de paises
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/aquinoaldair/phone-code.svg?style=flat-square)](https://packagist.org/packages/aquinoaldair/phone-code)
 [![Build Status](https://img.shields.io/travis/aquinoaldair/phone-code/master.svg?style=flat-square)](https://travis-ci.org/aquinoaldair/phone-code)
