@@ -41,6 +41,15 @@ $items->first()->phone_code; // "93"
 
 ```
 
+## Configuration
+
+```
+php artisan vendor:publish --tag=config
+```
+This will publish all the configuration options to: config/phone-code.php. You can add new values.
+
+
+
 ### Testing
 
 ``` bash
