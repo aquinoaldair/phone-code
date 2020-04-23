@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/aquinoaldair/phone-code.svg?branch=master)](https://travis-ci.org/aquinoaldair/phone-code)
 [![Total Downloads](https://img.shields.io/packagist/dt/aquinoaldair/phone-code.svg?style=flat-square)](https://packagist.org/packages/aquinoaldair/phone-code)
 
-Laravel 5.5 or higher, 6.x, 7.x
+Laravel 5.8 or higher, 6.x, 7.x
 
 ## Installation
 
