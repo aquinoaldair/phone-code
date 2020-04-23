@@ -20,4 +20,11 @@ trait FindByTrait
     private function findByIso3(Collection $collection, String $iso3){
         return $collection->firstWhere('iso3', strtoupper($iso3));
     }
+
+    private function findByCode(Collection $collection, $code){
+
+        return $collection->filter(function ($item) use ($code){
+            return $item->phone_code == strval($code);
+        });
+    }
 }

@@ -4,11 +4,13 @@
 namespace Aquinoaldair\PhoneCode;
 
 
+use Aquinoaldair\PhoneCode\Traits\FindByTrait;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Config;
 
 class PhoneCodeBase
 {
+    use FindByTrait;
     /**
      * @var Collection
      * use for return result
@@ -46,7 +48,28 @@ class PhoneCodeBase
         $this->result->push((object) $item);
     }
 
+    /**
+     * @return Collection
+     */
     public function get(){
         return $this->transformArrayToCollection()->result;
+    }
+
+    /**
+     * @param String $country
+     * @return String
+     */
+    public function codeOf(String $country){
+        $item = $this->findByName($this->get(), $country);
+        return ($item) ? $item->phone_code : null;
+    }
+
+    /**
+     * @param $code
+     * @return String
+     */
+    public function isCodeOf($code){
+        $item =  $this->findByCode($this->get(), $code);
+        return ($item) ? $item->first()->name : null;
     }
 }

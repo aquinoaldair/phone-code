@@ -15,8 +15,47 @@ class PhoneCodeTest extends TestCase
     }
 
 
+
     /** @test */
-    public function phone_codes_is_a_collection()
+    public function phone_codes_is_a_collection_from_object()
+    {
+        $phonecode = new PhoneCode();
+        $this->assertIsIterable(
+            $phonecode->getAll()
+        );
+    }
+
+    /** @test */
+    public function name_country_is_same_code()
+    {
+        $this->assertSame(
+            "Peru",
+            PhoneCode::isCodeOf(51)
+        );
+    }
+
+    /** @test */
+    public function code_is_same_code_of_country()
+    {
+        $this->assertSame(
+            "51",
+            PhoneCode::codeOf("Peru")
+        );
+    }
+
+
+    /** @test */
+    public function code_is_not_same_code_of_country()
+    {
+        $this->assertNotSame(
+            "51",
+            PhoneCode::codeOf("Mexico")
+        );
+    }
+
+
+    /** @test */
+    public function phone_codes_is_a_collection_from_static()
     {
         $this->assertIsIterable(
             PhoneCode::get()

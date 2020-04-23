@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/aquinoaldair/phone-code.svg?branch=master)](https://travis-ci.org/aquinoaldair/phone-code)
 [![Total Downloads](https://img.shields.io/packagist/dt/aquinoaldair/phone-code.svg?style=flat-square)](https://packagist.org/packages/aquinoaldair/phone-code)
 
-Laravel 6.x, 7.x
+Laravel 5.5 or higher, 6.x, 7.x
 
 ## Installation
 
@@ -41,9 +41,13 @@ $phonecode->makeFull("2281694545")->fromIso3('mex'); // return "+522281694545"
 
 $phonecode->getAll(); // return all data as collection
 
-//MORE FUNCTIONS
+//STATICS FUNCTIONS
 
+PhoneCode::isCodeOf(51);   // "Peru"
+PhoneCode::codeOf("Peru"); // "51"
 $items = PhoneCode::get(); // return a collection
+
+// Working with collections
 
 $item  = $items->first();
 
