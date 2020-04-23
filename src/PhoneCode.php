@@ -2,61 +2,32 @@
 
 namespace Aquinoaldair\PhoneCode;
 
-use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\Config;
+
+
+use Aquinoaldair\PhoneCode\Contracts\Make;
+use Aquinoaldair\PhoneCode\Contracts\MakeFull;
 
 class PhoneCode
 {
-
-    /**
-     * @var Collection
-     * use for return result
-     */
-    private  $result;
-
-    /**
-     * @var array
-     * use for get data from config file
-     */
-    private  $data;
-
-    /**
-     * PhoneCode constructor.
-     */
-    function __construct()
-    {
-        $this->result = new Collection();
-        $this->data = Config::get('phone-code.data');
+    public static function get(){
+        return  (new PhoneCodeBase())->get();
     }
 
-    /**
-     * @return Collection
-     */
-    public static function get()
-    {
-        return (new PhoneCode())->transformArrayToCollection()->result;
-    }
-
-    /**
-     * @return Collection
-     */
     public function getAll(){
-        return $this->transformArrayToCollection()->result;
+        return  $this->getFromBase();
     }
 
-    /**
-     * @return PhoneCode
-     */
-    private function transformArrayToCollection(){
-        array_map(array($this, 'addArrayItemToCollection'), $this->data);
-        return $this;
+    public function make(String $number){
+        return new Make($number);
     }
 
-    /**
-     * @param $item
-     * @return void
-     */
-    private function addArrayItemToCollection($item){
-        $this->result->push((object) $item);
+    public function makeFull(String $number){
+        return new MakeFull($number);
     }
+
+    private function getFromBase(){
+        return (new PhoneCodeBase())->get();
+    }
+
+
 }

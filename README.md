@@ -24,20 +24,46 @@ nombre, name, phone_code, iso2, iso3
 
 use Aquinoaldair\PhoneCode\PhoneCode;
 
-$items = PhoneCode::get(); // RETURN A COLLECTION
 
-// PROPERTIES
+//PRINCIPAL FUNCTIONS
 
-foreach($items as $item){
-    $item->phone_code; // "93
-    $item->nombre; // "Afganistán"
-    $item->name; // "Afghanistan"
-    $item->iso2; // "AF"
-    $item->iso3; // "AFG" 
-}
 
-$items->first()->phone_code; // "93"
+$phonecode = new PhoneCode();
 
+$phonecode->make("2281694545")->fromName('Mexico'); // return "522281694545"
+$phonecode->makeFull("2281694545")->fromName('Mexico'); // return "+522281694545"
+
+$phonecode->make("2281694545")->fromIso2('MX'); // return "522281694545"
+$phonecode->makeFull("2281694545")->fromIso2('MX'); // return "+522281694545" 
+
+$phonecode->make("2281694545")->fromIso3('MEX'); // return "522281694545"
+$phonecode->makeFull("2281694545")->fromIso3('mex'); // return "+522281694545" 
+
+$phonecode->getAll(); // return all data as collection
+
+//MORE FUNCTIONS
+
+$items = PhoneCode::get(); // return a collection
+
+$item  = $items->first();
+
+$item->phone_code; // "93
+$item->nombre; // "Afganistán"
+$item->name; // "Afghanistan"
+$item->iso2; // "AF"
+$item->iso3; // "AFG" 
+
+
+$items->firstWhere('name', "Peru");
+
+/*{
+  "nombre": "México"
+  "name": "Mexico"
+  "nom": "Mexique"
+  "iso2": "MX"
+  "iso3": "MEX"
+  "phone_code": "52"
+} */
 
 ```
 
