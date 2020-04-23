@@ -56,14 +56,16 @@ $item->iso3; // "AFG"
 
 $items->firstWhere('name', "Peru");
 
-/*{
-  "nombre": "México"
-  "name": "Mexico"
-  "nom": "Mexique"
-  "iso2": "MX"
-  "iso3": "MEX"
-  "phone_code": "52"
-} */
+/*
+{#416
+  +"nombre": "Perú"
+  +"name": "Peru"
+  +"nom": "Pérou"
+  +"iso2": "PE"
+  +"iso3": "PER"
+  +"phone_code": "51"
+}
+*/
 
 ```
 
