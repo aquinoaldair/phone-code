@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/aquinoaldair/phone-code.svg?branch=master)](https://travis-ci.org/aquinoaldair/phone-code)
 [![Total Downloads](https://img.shields.io/packagist/dt/aquinoaldair/phone-code.svg?style=flat-square)](https://packagist.org/packages/aquinoaldair/phone-code)
 
-Laravel 6.x or higher
+Laravel 6.x, 7.x
 
 ## Installation
 
@@ -57,15 +57,19 @@ $item->iso3; // "AFG"
 $items->firstWhere('name', "Peru");
 
 /*
-{#416
-  +"nombre": "Perú"
-  +"name": "Peru"
-  +"nom": "Pérou"
-  +"iso2": "PE"
-  +"iso3": "PER"
-  +"phone_code": "51"
+{
+  "nombre": "Perú"
+  "name": "Peru"
+  "nom": "Pérou"
+  "iso2": "PE"
+  "iso3": "PER"
+  "phone_code": "51"
 }
 */
+
+- You can implement any functionality of the laravel collections.
+- See https://laravel.com/docs/7.x/collections
+
 
 ```
 
