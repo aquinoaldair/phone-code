@@ -18,12 +18,6 @@ class PhoneCodeTest extends TestCase
     /** @test */
     public function phone_codes_is_a_collection()
     {
-        $phonecode =  new PhoneCode();
-
-        $items = $phonecode->getAll();
-
-        dd($items->firstWhere('name', 'Mexico'));
-
         $this->assertIsIterable(
             PhoneCode::get()
         );
